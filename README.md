@@ -140,10 +140,3 @@ requirements.txt → Python dependencies
 README.md        → This file
 ```
 
----
-
- a new password
-
-To capture these: run the app as described above, try a few passwords
-in the browser, and take screenshots of the analyzer panel showing
-the dial, checklist, and suggestions.

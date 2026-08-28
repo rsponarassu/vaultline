@@ -116,18 +116,18 @@ between passwords, not a precise real-world guarantee.
 
 ## Bonus features implemented
 
-- ✅ **Password generator** — customizable length (6–32) and character
+- **Password generator** — customizable length (6–32) and character
   types (uppercase / lowercase / digits / special), returned along
   with its own strength analysis
-- ✅ **Entropy estimate** — shown in bits on the dial
-- ✅ **Crack-time estimate** — human-readable (seconds → centuries),
+- **Entropy estimate** — shown in bits on the dial
+- **Crack-time estimate** — human-readable (seconds → centuries),
   assumptions stated above
-- ✅ **Web application** — full frontend included (`frontend.html`),
+- **Web application** — full frontend included (`frontend.html`),
   not just a CLI
-- ✅ **Additional feature — live analysis:** the frontend analyzes the
+- **Additional feature — live analysis:** the frontend analyzes the
   password as you type (debounced), not just on submit
-- ✅ **Additional feature — show/hide password toggle** on the input
-- ✅ **Additional feature — copy-to-clipboard** for generated passwords
+- **Additional feature — show/hide password toggle** on the input
+- **Additional feature — copy-to-clipboard** for generated passwords
 
 ---
 
@@ -142,12 +142,7 @@ README.md        → This file
 
 ---
 
-## Screenshots / demo
-
-_Add 2–3 screenshots here before submitting:_
-1. A weak password being analyzed (e.g. `password1`)
-2. A strong password being analyzed
-3. The password generator producing a new password
+ a new password
 
 To capture these: run the app as described above, try a few passwords
 in the browser, and take screenshots of the analyzer panel showing

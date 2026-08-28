@@ -306,7 +306,7 @@
         <div class="chip active" data-type="uppercase">ABC</div>
         <div class="chip active" data-type="lowercase">abc</div>
         <div class="chip active" data-type="digits">123</div>
-        <div class="chip active" data-type="special">#$&</div>
+        <div class="chip active" data-type="special">#$&amp;</div>
       </div>
 
       <div class="slider-row">
@@ -323,14 +323,12 @@
     </div>
   </div>
 
-  <p class="status-note" id="statusNote">Connecting to backend at <code>http://localhost:5000</code>…</p>
+  <p class="status-note" id="statusNote"></p>
 </div>
 
 <script>
-  // Backend URL — change this to your deployed Render URL,
-  // e.g. "https://vaultline-backend.onrender.com"
-  // Use "http://localhost:5000" only when running the backend locally.
-  const API_BASE = "https://YOUR-BACKEND-NAME.onrender.com";
+  // Relative URL path — allows frontend to call backend seamlessly on any host
+  const API_BASE = "";
 
   const pwInput = document.getElementById('pwInput');
   const toggleVis = document.getElementById('toggleVis');
@@ -381,7 +379,7 @@
       statusNote.textContent = '';
       statusNote.className = 'status-note';
     } catch (err) {
-      statusNote.textContent = 'Could not reach the backend — make sure app.py is running on port 5000.';
+      statusNote.textContent = 'Could not reach the backend server.';
       statusNote.className = 'status-note error';
     }
   }
@@ -463,7 +461,7 @@
       pwInput.value = data.password;
       renderResult(data.analysis);
     } catch (err) {
-      statusNote.textContent = 'Could not reach the backend — make sure app.py is running on port 5000.';
+      statusNote.textContent = 'Could not reach the backend server.';
       statusNote.className = 'status-note error';
     }
   });
@@ -482,7 +480,7 @@
   fetch(`${API_BASE}/api/analyze`, {
     method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({password:''})
   }).then(() => { statusNote.textContent=''; }).catch(() => {
-    statusNote.textContent = 'Backend not detected yet — start app.py, then reload this page.';
+    statusNote.textContent = 'Connecting to backend...';
     statusNote.className = 'status-note error';
   });
 </script>
